@@ -1,14 +1,10 @@
-import logo from "./logo.svg";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "https://fierce-citadel-75064.herokuapp.com/";
 
 function App() {
   const [response, setResponse] = useState("");
-  const [messages, setMessages] = useState([]);
-
-  const [username, setUsername] = useState("");
   const [text, setText] = useState("");
   const [socket, setSocket] = useState();
 
